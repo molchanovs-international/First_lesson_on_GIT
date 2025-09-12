@@ -1,0 +1,11 @@
+﻿{
+    "name":  "first_lesson_on_git",
+    "version":  "0.1.0",
+    "private":  true,
+    "packageManager":  "pnpm@9.6.0",
+    "scripts":  {
+                    "build":  "echo \"No build configured\"",
+                    "dev":  "echo \"No dev server configured\"",
+                    "test":  "echo \"No tests configured\""
+                }
+}

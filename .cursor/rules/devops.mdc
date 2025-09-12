@@ -1,0 +1,48 @@
+---
+description: DevOps rules for GitHub, Git, and basic dev environment with PNPM.
+globs:
+  - "**/*"
+alwaysApply: true
+---
+
+### GitHub (very brief)
+- Use PRs for all changes; keep them small and focused.
+- Require at least one review and passing CI before merge.
+- Write clear, imperative PR titles; link related issues.
+- Prefer squash merge to maintain a clean history.
+- Protect `main`; tag releases and update changelog.
+
+### Git (very brief)
+- Branch from `main`: `feature/...`, `fix/...`, `chore/...`.
+- Commit small and often; imperative present tense (e.g., "Add X").
+- Rebase locally before opening/updating PRs; avoid force-push on shared branches.
+- Pull with rebase; resolve conflicts early.
+- Use `.gitignore`; stash WIP safely; tag versions for releases.
+
+### Basic development environment (very brief)
+- Tools: Git, GitHub CLI, PNPM.
+- Install with a single manager (prefer winget); avoid mixing with choco/scoop.
+- Restart your terminal after installs to refresh PATH.
+- Check duplicates on PATH:
+```
+where.exe git
+where.exe gh
+where.exe pnpm
+```
+- Verify tools:
+```
+git --version
+gh --version
+pnpm -v
+```
+- Pin PNPM with Corepack to avoid lockfile churn (use your chosen version, e.g., 9.6.0):
+```
+corepack enable
+corepack prepare pnpm@9.6.0 --activate
+```
+- In `package.json`, set the package manager:
+```json
+{
+  "packageManager": "pnpm@9.6.0"
+}
+```
