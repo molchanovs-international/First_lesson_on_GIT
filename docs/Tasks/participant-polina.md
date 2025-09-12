@@ -25,3 +25,5 @@
 ### Чеклист завершения
 - [ ] Файл `participants/polina.md` находится в `main` на GitHub.
 - [ ] Выполнен цикл: clone → commit → push (без отдельных веток/PRs).
+
+This is my change
